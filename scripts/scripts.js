@@ -1,9 +1,9 @@
 // let user_input = prompt("Hello! Please Enter Your Name");
 
-function welcome(name, time = "day") {
-    alert(`Good ${time} ${name}`);
-    console.log(`Good ${time} ${name}!`);
-    }
+// function welcome(name, time = "day") {
+//     alert(`Good ${time} ${name}`);
+//     console.log(`Good ${time} ${name}!`);
+//     }
 
 // welcome(user_input)
 
@@ -19,6 +19,15 @@ function welcome(name, time = "day") {
 //     console.log(`Welcome ${name}!`);
 // }
 
-welcome("Neda")
-welcome("Neda", "Evening");
+// welcome("Neda")
+// welcome("Neda", "Evening");
 
+let user_input = prompt("Please enter a radius")
+
+function CircleArea(radius) {
+    area = Math.PI * radius ** 2
+    console.log(`The area of the circle is ${area}`)
+    alert(`The area of the circle is ${area}`) 
+}
+
+CircleArea(user_input)
