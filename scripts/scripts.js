@@ -34,16 +34,27 @@
 //     }
 //     CircleArea(user)
 
+const radiusPara = document.querySelector('#radius');
+console.log(radiusPara);
+const resultPara = document.querySelector('#result');
+console.log(resultPara);
+
 let user_input = prompt("Please enter a radius") 
+// update the text of the radiuspara
+    radiusPara.textContent = user_input
+// prompt always returns a string
 
 function CircleArea(radius) {
     if (isNaN(radius)) {
         alert("This is not a number");
+        // replace alert with updating text of resultPara 
+        resultPara.textContent = "Sike DAS the WRONG NUMBAH"
     }
     else {
         area = Math.PI * radius ** 2
         // console.log(`The area of the circle is ${area}`)
         // alert(`The area of the circle is ${area}`)
+        resultPara.textContent = area
         return area
     }
 }
