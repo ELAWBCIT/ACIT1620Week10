@@ -22,12 +22,14 @@
 // welcome("Neda")
 // welcome("Neda", "Evening");
 
-let user_input = prompt("Please enter a radius")
+let user_input
 
-function CircleArea(radius) {
-    area = Math.PI * radius ** 2
-    console.log(`The area of the circle is ${area}`)
-    alert(`The area of the circle is ${area}`) 
-}
-
-CircleArea(user_input)
+do {
+    user =  prompt("Please enter a radius");
+}while(isNaN(user) === true)
+    function CircleArea(radius) {
+        area = Math.PI * radius ** 2
+        console.log(`The area of the circle is ${area}`)
+        alert(`The area of the circle is ${area}`) 
+    }
+    CircleArea(user)
