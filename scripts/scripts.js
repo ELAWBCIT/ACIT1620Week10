@@ -86,7 +86,7 @@ for (let item of shoppingList) {
 }
 }
 
-let myList = ['bread', 'cheese', 'green pepper']
+let myList = ['pasta', 'pesto', 'tomatoes', 'cheese', 'green peppers']
 populateList(myList);
 
 function squareListMaker() {
@@ -98,3 +98,37 @@ function squareListMaker() {
 }
 
 squareListMaker();
+
+
+function updateImage() {
+    const image = document.querySelector('#shoppingCart');
+    image.setAttribute(
+        "src", 
+        "https://cdn-icons-png.flaticon.com/512/263/263142.png"
+    );
+    image.setAttribute("alt", "shopping cart icon");
+    image.setAttribute("width", 50);
+    image.setAttribute("height", 50);
+}
+
+updateImage();
+
+function changeTextGreen() {
+//1. find all li --> querySelectorAll()
+const listItems = document.querySelectorAll(".shopping li")
+// console.log(listItems)  
+//2. loop through all the li 
+for (let item of listItems) {
+    //3. Get the textContent
+    const text = item.textContent
+    console.log(item.textcontent);
+        //4. Check if the textContent contains the word green.
+        if (text.includes("green"))
+        // console.log(text);
+        //using the include() method. --> text.includes("green")
+            //5. If it does, change the li to green text color. 
+            item.classList.add("greenText")
+}
+}
+
+changeTextGreen();
