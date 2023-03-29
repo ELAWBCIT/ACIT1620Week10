@@ -88,3 +88,13 @@ for (let item of shoppingList) {
 
 let myList = ['bread', 'cheese', 'green pepper']
 populateList(myList);
+
+function squareListMaker() {
+    const ulList = document.querySelector('.shopping');
+    //remove circleList class on ulList
+    ulList.classList.remove('circleList');
+    //add squareList class on ulList 
+    ulList.classList.add('squareList');
+}
+
+squareListMaker();
